@@ -11,12 +11,11 @@ var Babbler = (function(babbler){
     year:      "gozaimasu",
   };
 
-// this function accepts a string and outputs a different string.
+// this function accepts a string and returns a different string.
   babbler.translateToJapanese = function(string) { 
 
     // split sentence up into an array so the words are indexed and searchable with "indexOf"
     var array = string.split(" ") // array = ["merry", "christmas", "and", "happy", "new", "year"]
-
 
     //use .indexOf to find specific words in the array and overwrite them with Japanese replacements
     array[array.indexOf("merry")]     = japanese.merry; // array[0] = "merii"
