@@ -6,7 +6,7 @@
 //what babler was from other js files
 var Babbler = (function(oldBabbler){    
   //object lexicon for spanish
-  var translateToSpanish = {
+  var toSpanish = {
     merry: "Alegre",
     christmas: "Navidad",
     and: "y",
@@ -21,12 +21,12 @@ var Babbler = (function(oldBabbler){
     } else {
       //translate each of the english words in the object to a new object
       var parsePhraseEntered = textPassedIn.split(" ");
-      parsePhraseEntered[parsePhraseEntered.indexOf("merry")] = translateToSpanish.merry;
-      parsePhraseEntered[parsePhraseEntered.indexOf("christmas")] = translateToSpanish.christmas;
-      parsePhraseEntered[parsePhraseEntered.indexOf("and")] = translateToSpanish.and;
-      parsePhraseEntered[parsePhraseEntered.indexOf("happy")] = translateToSpanish.happy;
-      parsePhraseEntered[parsePhraseEntered.indexOf("new")] = translateToSpanish.new;
-      parsePhraseEntered[parsePhraseEntered.indexOf("year")] = translateToSpanish.year;
+      parsePhraseEntered[parsePhraseEntered.indexOf("merry")] = toSpanish.merry;
+      parsePhraseEntered[parsePhraseEntered.indexOf("christmas")] toSpanish.christmas;
+      parsePhraseEntered[parsePhraseEntered.indexOf("and")] = toSpanish.and;
+      parsePhraseEntered[parsePhraseEntered.indexOf("happy")] = tooSpanish.happy;
+      parsePhraseEntered[parsePhraseEntered.indexOf("new")] = toSpanish.new;
+      parsePhraseEntered[parsePhraseEntered.indexOf("year")] = toSpanish.year;
       //english to spanish will be different string structure, not one for one so phrase will 
       //be inorrect syntax
       var newPhraseTranslated = parsePhraseEntered.join(" ");
