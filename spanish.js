@@ -33,7 +33,5 @@ var Babbler = (function(oldBabbler){
         return newPhraseTranslated;
       }  
   }
-
   return oldBabbler
-
  }(Babbler || {})); //Optional bonus 1
