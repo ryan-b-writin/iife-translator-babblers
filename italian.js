@@ -1,13 +1,13 @@
 // lexicon object: Italian
 var babbler = function(babbler) {
   var italian  = {
-    "merry":"bon",  
-    "Christmas":"Natale", 
-    "Happy":"Felice", 
-    "New":"Nuovo", 
-    "Year":"Anno" 
-    "holiday":"vacanza", 
-    "and":"e"
+    merry:"bon",  
+    Christmas:"Natale", 
+    Happy:"Felice", 
+    New:"Nuovo", 
+    Year:"Anno",
+    holiday:"vacanza", 
+    and:"e"
 }; 
 
 // function to accept a string from user and     return the new translation
