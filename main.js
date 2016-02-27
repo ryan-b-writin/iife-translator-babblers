@@ -9,9 +9,10 @@ button.addEventListener("click", babble);
 
 var clearButton = document.getElementById("clear");
 
-var removeText = function(){
-  document.getElementById("textInput").innerHTML = "";
-  document.getElementById("translatedGreeting").innerHTML= "";
+//need to set the HTML Tag with result from IFFE
+function removeText(){
+  document.getElementById("textInput").value= "";
+  document.getElementById("translatedGreeting").value= "";
 }
 
 clearButton.addEventListener("click", removeText);
@@ -44,7 +45,7 @@ function babble() {
     translatedGreeting.innerHTML="<p>"+translated+"</p>";
  };     
 
-//need to set the HTML Tag with result from IFFE
+
 
 
 
