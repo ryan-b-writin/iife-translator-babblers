@@ -3,10 +3,18 @@
 
 //Main JS file that accepts values from index html
 //varible declarations of a button to capure the input from the html
-// console.log("In JS Main");
 
 var button = document.getElementById("translator");
 button.addEventListener("click", babble);
+
+var clearButton = document.getElementById("clear");
+
+var removeText = function(){
+  document.getElementById("textInput").innerHTML = "";
+  document.getElementById("translatedgreeting").innerHTML= "";
+}
+
+clearButton.addEventListener("click", removeText);
 
 //add event listener to button element and call the language evaluation
 
@@ -16,37 +24,28 @@ button.addEventListener("click", babble);
 
 var babble = function() {
   var language = document.getElementById("selector").value;
-  textInput = document.getElementById("textInput").value;
-
-  var translateToSpanish = function(textInput){ 
-    Babbler.translateToSpanish(textInput) 
-  };
-
+  var textInput = document.getElementById("textInput").value;
     // check value returned
     if (language === "spanish") {
-     Babbler.translateToSpanish(textInput);
-    };
-            
- //        }
- //        else if language === "hindi" {
- //           babble.toHind: function();
-            
- //        }
- //        else if language === "italian" {
- //           babble.toItalian: function(); 
-          
- //        }
- //        else language === "japanese" {
- //          babble.toJapanese function();
- //        } 
-      // };
- // return babble       
+      Babbler.translateToSpanish(textInput);
+    }
+      else if (language === "hindi") {
+        Babbler.translateToHindi(textInput);        
+      }
+        else if (language === "italian") {
+          Babbler.translateToItalian(textInput); 
+        }
+          else if (language === "japanese") {
+            Babbler.translateToJapanese(textInput);
+          } 
+            else if(language === "french")  {
+              Babbler.translateToFrench(textInput);
+            }
  };     
 
- button.addEventListener("click", babble);
-
-
 //need to set the HTML Tag with result from IFFE
+
+
 
 
 
