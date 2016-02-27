@@ -11,7 +11,7 @@ var clearButton = document.getElementById("clear");
 
 var removeText = function(){
   document.getElementById("textInput").innerHTML = "";
-  document.getElementById("translatedgreeting").innerHTML= "";
+  document.getElementById("translatedGreeting").innerHTML= "";
 }
 
 clearButton.addEventListener("click", removeText);
@@ -22,25 +22,26 @@ clearButton.addEventListener("click", removeText);
 // happen based on which language is selected from the HTML
 // look at what value from the HTML call the appropriate "getter";
 
-var babble = function() {
+function babble() {
   var language = document.getElementById("selector").value;
   var textInput = document.getElementById("textInput").value;
-    // check value returned
+  var translated;
     if (language === "spanish") {
-      Babbler.translateToSpanish(textInput);
+       translated = Babbler.translateToSpanish(textInput);
     }
       else if (language === "hindi") {
-        Babbler.translateToHindi(textInput);        
+        translated = Babbler.translateToHindi(textInput);        
       }
         else if (language === "italian") {
-          Babbler.translateToItalian(textInput); 
+         translated = Babbler.translateToItalian(textInput); 
         }
           else if (language === "japanese") {
-            Babbler.translateToJapanese(textInput);
+            translated = Babbler.translateToJapanese(textInput);
           } 
             else if(language === "french")  {
-              Babbler.translateToFrench(textInput);
-            }
+              translated = Babbler.translateToFrench(textInput);
+            };
+    translatedGreeting.innerHTML="<p>"+translated+"</p>";
  };     
 
 //need to set the HTML Tag with result from IFFE
