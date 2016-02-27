@@ -16,15 +16,15 @@ var Babbler = (function(oldBabbler){
   };
   // quicky check to see if phrase entered and return correct oder as english is not 1-1
   oldBabbler.translateToSpanish = function(textPassedIn) {
-    if inputText === "merry christmas and happy new year" {
-      return "Feliz navidad y próspero año nuevo";
-    } else {
+    // if (inputText === "merry christmas and happy new year") {
+    //   return "Feliz navidad y próspero año nuevo";
+    // } else {
       //translate each of the english words in the object to a new object
       var parsePhraseEntered = textPassedIn.split(" ");
       parsePhraseEntered[parsePhraseEntered.indexOf("merry")] = toSpanish.merry;
-      parsePhraseEntered[parsePhraseEntered.indexOf("christmas")] toSpanish.christmas;
+      parsePhraseEntered[parsePhraseEntered.indexOf("christmas")] = toSpanish.christmas;
       parsePhraseEntered[parsePhraseEntered.indexOf("and")] = toSpanish.and;
-      parsePhraseEntered[parsePhraseEntered.indexOf("happy")] = tooSpanish.happy;
+      parsePhraseEntered[parsePhraseEntered.indexOf("happy")] = toSpanish.happy;
       parsePhraseEntered[parsePhraseEntered.indexOf("new")] = toSpanish.new;
       parsePhraseEntered[parsePhraseEntered.indexOf("year")] = toSpanish.year;
       //english to spanish will be different string structure, not one for one so phrase will 
@@ -32,6 +32,5 @@ var Babbler = (function(oldBabbler){
       var newPhraseTranslated = parsePhraseEntered.join(" ");
         return newPhraseTranslated;
       }  
-  }
   return oldBabbler
  }(Babbler || {})); //Optional bonus 1
